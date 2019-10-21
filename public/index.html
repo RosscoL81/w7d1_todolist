@@ -7,6 +7,27 @@
     <script src="./js/bundle.js"></script>
   </head>
   <body>
+    <h1>To Do List</h1>
+    <div id="app">
+      <ul>
+        <li v-for = "(item, index) in todos">
+          <span>{{item.name}}</span>
+          <span>{{item.priority}}</span>
+        </li>
+      </ul>
+      <form v-on:submit.prevent="saveNewItem">
+        <label for="new-item">Add new to-do item</label>
+        <input id="new-item" type="text" v-model="newItem">
+        <label for="priority">Priority</label>
+        <select id="priority">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+          </select>
+        <input type="submit" value="Save new item">
+      </form>
+
+    </div>
 
   </body>
 </html>

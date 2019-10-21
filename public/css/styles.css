@@ -1,0 +1,10 @@
+li {
+	margin: 20px 0;
+	padding: 10px;
+	display: flex;
+	justify-content:space-between;
+}
+
+body {
+  background-color: SkyBlue;
+}
